@@ -1,4 +1,12 @@
-var bitcoinjs = require('bitcoinjs-lib')
+var BITBOXCli = require('bitbox-cli/lib/bitboxcli').default;
+var bb = new BITBOXCli({
+  protocol: 'http',
+  host: '127.0.0.1',
+  port: 8332,
+  username: '',
+  password: '',
+  corsproxy: 'remote'
+});
 var discovery = require('./discovery')
 
 var Chain = require('./chain')
@@ -9,7 +17,7 @@ function Account (chains) {
 
 Account.fromJSON = function (json, network, addressFunction) {
   var chains = json.map(function (j) {
-    var node = bitcoinjs.HDNode.fromBase58(j.node, network)
+    var node = bb.HDNode.fromBase58(j.node, network)
 
     var chain = new Chain(node, j.k, addressFunction)
     chain.map = j.map
