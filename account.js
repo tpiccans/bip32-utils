@@ -1,4 +1,4 @@
-var BITBOXCli = require('bitbox-cli/lib/bitboxcli').default;
+var BITBOXCli = require('bitbox-cli/lib/bitboxcli').default
 var bb = new BITBOXCli({
   protocol: 'http',
   host: '127.0.0.1',
@@ -6,7 +6,7 @@ var bb = new BITBOXCli({
   username: '',
   password: '',
   corsproxy: 'remote'
-});
+})
 var discovery = require('./discovery')
 
 var Chain = require('./chain')
