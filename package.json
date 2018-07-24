@@ -31,7 +31,7 @@
     "test": "npm run standard && npm run coverage",
     "unit": "tape test/*.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "bitbox-cli": "1.4.2",
     "keccak": "^1.3.0",
     "nyc": "*",
