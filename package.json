@@ -1,6 +1,6 @@
 {
   "name": "bip32-utils",
-  "version": "0.11.3",
+  "version": "0.12.0",
   "description": "A set of utilities for working with BIP32.",
   "author": "Daniel Cousens",
   "main": "index.js",
@@ -37,9 +37,6 @@
     "nyc": "*",
     "standard": "^11.0.1",
     "tape": "*"
-  },
-  "peerDependencies": {
-    "bitbox-cli": "1.5.*"
   },
   "engines": {
     "node": ">=8.11.3"
