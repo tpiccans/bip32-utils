@@ -1,5 +1,5 @@
-var BITBOXCli = require('bitbox-cli/lib/bitbox-cli').default;
-var bb = new BITBOXCli();
+// var BITBOXCli = require('bitbox-cli/lib/bitbox-cli').default;
+// var bb = new BITBOXCli();
 var discovery = require('./discovery');
 
 var Chain = require('./chain');
@@ -9,21 +9,21 @@ function Account (chains) {
 }
 
 Account.fromJSON = function (json, network, addressFunction) {
-  var chains = json.map(function (j) {
-    var node = bb.HDNode.fromBase58(j.node, network)
-
-    var chain = new Chain(node, j.k, addressFunction)
-    chain.map = j.map
-
-    // derive from k map
-    chain.addresses = Object.keys(chain.map).sort(function (a, b) {
-      return chain.map[a] - chain.map[b]
-    })
-
-    return chain
-  })
-
-  return new Account(chains)
+  // var chains = json.map(function (j) {
+  //   var node = bb.HDNode.fromBase58(j.node, network)
+  //
+  //   var chain = new Chain(node, j.k, addressFunction)
+  //   chain.map = j.map
+  //
+  //   // derive from k map
+  //   chain.addresses = Object.keys(chain.map).sort(function (a, b) {
+  //     return chain.map[a] - chain.map[b]
+  //   })
+  //
+  //   return chain
+  // })
+  //
+  // return new Account(chains)
 }
 
 Account.prototype.clone = function () {
