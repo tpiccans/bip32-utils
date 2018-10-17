@@ -32,7 +32,6 @@
     "unit": "tape test/*.js"
   },
   "dependencies": {
-    "bitbox-cli": "1.5.*",
     "keccak": "^1.3.0",
     "nyc": "*",
     "standard": "^11.0.1",
