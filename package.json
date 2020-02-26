@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "keccak": "^3.0.0",
-    "nyc": "^15.0.0",
+    "nyc": "*",
     "standard": "^11.0.1",
     "tape": "*"
   },
